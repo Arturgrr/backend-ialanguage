@@ -1,5 +1,6 @@
 import { MessageSchema } from "@/whatsapp/models/messages";
 import { FastifyReply, FastifyRequest } from "fastify";
+import { getTextContent } from "./utils/getTextContent";
 
 export async function postWhatsappWebhook(
   req: FastifyRequest,
@@ -20,6 +21,12 @@ export async function postWhatsappWebhook(
 
       if (!("messages" in messageEntry) || !messageEntry.messages?.length)
         return;
+
+      // TODO: Verificação se a pessoa tem cadastro ou não e redirecionar adequadamente
+
+      for (const message of messageEntry.messages) {
+        getTextContent(message);
+      }
     }
   }
 }

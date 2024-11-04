@@ -9,8 +9,9 @@ datasource db {
 
 model User {
   id       String   @id @default(cuid())
-  name     String?
-  number   String?
+  name     String
+  number   String
   email    String   @unique
   createdAt DateTime @default(now())
+  signature DateTime
 }
