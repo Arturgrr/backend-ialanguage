@@ -20,8 +20,8 @@
   - [ ] Dados de mensagens de texto
 - [ ] Implementar interface web:
 
-  - [ ] Pagamento
-  - [ ] Cadastro
+  - [x] Pagamento
+  - [x] Cadastro
   - [ ] Auth Code por template da Meta
   - [ ] Montar cronograma?
   - [ ] Configurações? Quais?
